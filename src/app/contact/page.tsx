@@ -21,7 +21,7 @@ function getISTTime() {
   });
 }
 
-const WHATSAPP_NUMBER = '917382443379'; // <--- your WhatsApp number here (no '+', just countrycode+number)
+const WHATSAPP_NUMBER = '918977195143'; // <--- your WhatsApp number here (no '+', just countrycode+number)
 export default function ContactPage() {
   const [form, setForm] = useState({ name: '', number: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -60,9 +60,9 @@ export default function ContactPage() {
         const waText =
           `Hello PIXELPILOT!
           I'm ${form.name} 
-          My WhatsApp number: ${form.number} 📱
+          My WhatsApp number: ${form.number} 
 
-          ✨ My requirements:
+           My requirements:
           ${form.message}
 
           Thank you so much, PIXELPILOT team! 
@@ -71,7 +71,7 @@ export default function ContactPage() {
           `;
           const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waText)}`;
           window.open(waUrl, "_blank");
-alert(waText);
+
 // Optionally still show a thank you or clear after
 setStatus('success');
 setTimeout(() => {
