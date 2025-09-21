@@ -1,6 +1,7 @@
 // Optionally, you can make icons more stylish by using react-icons or emoji.
 import { FaSearch, FaBullhorn, FaLaptopCode, FaChartLine, FaUserFriends, FaRegFileAlt } from "react-icons/fa";
 import FadeIn from "../components/FadeIn";
+import Link from "next/link";
 
 const services = [
   {
@@ -54,6 +55,7 @@ export default function ServicesPage() {
               border border-orange-600/10
               transition-all duration-300
               hover:scale-105 hover:shadow-2xl hover:shadow-orange-400/20 
+
               hover:bg-gradient-to-tr hover:from-orange-200/30 hover:to-zinc-900
               backdrop-blur-md"
           >
@@ -61,12 +63,16 @@ export default function ServicesPage() {
             <h2 className="text-xl font-bold text-orange-400 mb-2 text-center">{service.title}</h2>
             <p className="text-gray-200 text-center mb-5">{service.description}</p>
             <div className="w-full flex flex-col items-center mt-auto">
-              <button
+              {/* <button
                 className="uppercase px-6 py-2 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-400 text-black font-bold shadow
                 hover:scale-110 hover:bg-orange-400 focus:outline-none transition-all duration-200 text-sm"
               >
-                {service.cta}
-              </button>
+                {service.cta} <span className="text-orange-900">→</span>
+              </button> */}
+              <Link href="/contact#contact-form" className="uppercase px-6 py-2 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-400 text-black font-bold shadow
+                hover:scale-110 hover:bg-orange-400 focus:outline-none transition-all duration-200 text-sm">
+                {service.cta} <span className="text-orange-900 ml-1">→</span>
+              </Link>
             </div>
           </div>
           </FadeIn>

@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { FaArrowRight, FaRegNewspaper } from "react-icons/fa";
 import Image from "next/image";
+import FadeIn from "../components/FadeIn";
 
 const posts = [
   {
@@ -54,10 +55,11 @@ export default function BlogPage() {
         <span className="inline-block min-w-[180px] bg-yellow-200 text-orange-700 px-4 py-1 rounded-full text-xs font-bold text-center shadow">{ist} IST</span>
       </div>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {posts.map(post => (
+        {posts.map((post, idx) => (
+          <FadeIn key={post.title} delay={idx * 0.1}> 
           <div key={post.title} className="rounded-xl overflow-hidden shadow-lg hover:scale-105 transform transition cursor-pointer group bg-gradient-to-br from-orange-600/10 via-black/80 to-yellow-400/5 hover:shadow-orange-400/30">
             <div className="w-full aspect-[16/9] bg-zinc-800">
-              <Image src={post.img} alt={post.title} className="w-full h-full object-cover hover:scale-110 transition" />
+              <Image src={post.img} alt={post.title} className="w-full h-full object-cover hover:scale-110 transition" width={200} height={200}/>
             </div>
             <div className="p-5 flex flex-col gap-2">
               <div className="flex flex-row items-center justify-between">
@@ -68,21 +70,13 @@ export default function BlogPage() {
               <div className="text-gray-200 text-sm">{post.description}</div>
             </div>
           </div>
+          </FadeIn>
         ))}
       </div>
       {/* Inspirational quote/CGI area */}
       <div className="mt-10 p-5 bg-gradient-to-br from-orange-500/40 via-yellow-300/20 to-orange-600/60 rounded-xl shadow-xl flex items-center justify-center text-center text-lg font-bold text-orange-950">
-        @quote; TRUST IS BUILT ON TRUTH. DIGITAL GROWTH IS BUILT ON PIXELPILOT. @quote;
-      </div>
-
-      {/* Fun video - replace src for your own! */}
-      <div className="mt-8 mx-auto max-w-xl">
-        <video
-          src="https://www.w3schools.com/html/mov_bbb.mp4"
-          controls
-          className="w-full rounded-lg shadow-xl"
-        />
-      </div>
+        &quot;TRUST IS BUILT ON TRUTH. DIGITAL GROWTH IS BUILT ON PIXELPILOT.&quot;
+      </div>      
     </section>
   );
 }

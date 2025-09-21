@@ -1,5 +1,6 @@
 import { FaUsers, FaLightbulb, FaRocket, FaHandshake } from "react-icons/fa";
 import Image from "next/image";
+import FadeIn from "../components/FadeIn";
 
 const values = [
   { icon: <FaRocket className="text-orange-400 text-2xl md:text-3xl" />, label: "INNOVATION", desc: "Always ahead, so our clients soar first." },
@@ -16,7 +17,7 @@ export default function AboutPage() {
         <p className="text-lg text-orange-200 font-semibold mb-5">Empowering brands with digital altitude. 🚀</p>
       </div>
       <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16 mb-10">
-        <Image src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Pilot" className="rounded-2xl shadow-lg w-full md:w-1/2 object-cover aspect-[4/3]" />
+        <Image src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Pilot" className="rounded-2xl shadow-lg w-full md:w-1/2 object-cover aspect-[4/3]" width={400} height={200}/>
         <div className="flex-1">
           <div className="bg-gradient-to-br from-black/80 via-zinc-900/80 to-orange-300/20 rounded-2xl p-6 md:p-8 shadow-xl border border-orange-500/20">
             <h2 className="text-2xl font-bold text-orange-400 mb-2">WHY BRANDS TRUST US</h2>
@@ -28,15 +29,18 @@ export default function AboutPage() {
         </div>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-        {values.map(v => (
+        {values.map((v, idx) => (
+          <FadeIn key={v.label} delay={idx * 0.1}> 
           <div key={v.label}
             className="group bg-gradient-to-br from-orange-50/20 via-black/40 to-yellow-400/10 p-6 rounded-xl shadow-md text-center hover:scale-105 hover:shadow-xl hover:bg-orange-100/30 ease-in-out duration-200 transition">
             <div>{v.icon}</div>
             <h3 className="font-bold text-orange-400 text-lg mt-2 mb-1 group-hover:underline">{v.label}</h3>
             <p className="text-sm text-gray-300">{v.desc}</p>
           </div>
-        ))}
+          </FadeIn>
+        ))}        
       </div>
+      
       <div className="p-6 rounded-xl bg-gradient-to-r from-orange-400/10 via-yellow-200/10 to-orange-500/10 text-center shadow flex flex-col items-center gap-3">
         <span className="text-3xl">✨</span>
         <div className="uppercase font-bold text-orange-400">choose PIXELPILOT & ENJOY THE RIDE</div>

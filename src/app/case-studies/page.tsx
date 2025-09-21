@@ -1,4 +1,5 @@
 import { FaBuilding, FaStar, FaRocket, FaTrophy } from "react-icons/fa";
+import FadeIn from "../components/FadeIn";
 
 const cases = [
   {
@@ -32,7 +33,8 @@ export default function CaseStudiesPage() {
     <section className="container mx-auto px-4 py-16">
       <h1 className="uppercase text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-600 bg-clip-text text-transparent mb-7 text-center">PIXELPILOT CASE STUDIES</h1>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {cases.map(c => (
+        {cases.map((c, idx) => (
+          <FadeIn key={c.title} delay={idx * 0.1}>
           <div key={c.title}
             className="group rounded-2xl bg-gradient-to-br from-black/80 via-orange-100/10 to-yellow-300/10 p-6 shadow-lg hover:scale-105 transition-all flex flex-col border border-orange-400/10"
           >
@@ -48,6 +50,7 @@ export default function CaseStudiesPage() {
               <span className="text-lg text-yellow-400 font-bold animate-bounce">PIXELPILOT – POWERED GROWTH</span>
             </div>
           </div>
+          </FadeIn>
         ))}
       </div>
       <div className="text-center mt-10 p-5 font-bold text-orange-400 rounded-xl bg-gradient-to-r from-orange-400/10 to-yellow-300/10 shadow">

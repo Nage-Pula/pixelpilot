@@ -1,7 +1,9 @@
 'use client';
 import { useEffect, useState } from 'react';
 // You may use any icons from react-icons for the avatar
-import { FaUserCircle, FaWhatsapp, FaPaperPlane, FaRegSmile } from 'react-icons/fa';
+import { FaUserCircle, FaWhatsapp, FaPaperPlane, FaRegSmile, FaInstagram, FaFacebook } from 'react-icons/fa';
+import Link from 'next/link';
+
 
 
 function getISTTime() {
@@ -57,27 +59,30 @@ export default function ContactPage() {
       return;
     }
     // Compose WhatsApp message
-        const waText =
-          `Hello PIXELPILOT!
+          const waText =
+         `Hello PIXELPILOT!
           I'm ${form.name} 
+          Interested in your digital growth services.
+
           My WhatsApp number: ${form.number} 
 
-           My requirements:
+          My requirements:
           ${form.message}
 
           Thank you so much, PIXELPILOT team! 
           Looking forward to flying high together! 
-          - ${form.name}(:-)
+          - ${form.name}
+
+          visit you at : https://pixelpilot-digitalsolutions.vercel.app/
           `;
           const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waText)}`;
           window.open(waUrl, "_blank");
-
-// Optionally still show a thank you or clear after
-setStatus('success');
-setTimeout(() => {
-  setForm({ name: '', number: '', message: '' });
-  setStatus('idle');
-}, 1500);
+          // Optionally still show a thank you or clear after
+          setStatus('success');
+          setTimeout(() => {
+            setForm({ name: '', number: '', message: '' });
+            setStatus('idle');
+          }, 1500);
   }
 
   // For fun, a random "enjoy our services" or quote on each render
@@ -175,6 +180,7 @@ setTimeout(() => {
           >
             Send via WhatsApp <FaWhatsapp className="ml-2" />
           </button>
+          
           {/* Animated feedback */}
           {err && <div className="text-red-400 font-bold text-center animate-bounce">{err}</div>}
           {status === "success" && (
@@ -185,16 +191,136 @@ setTimeout(() => {
             </div>
           )}
         </form>
-        {/* Optionally, welcome video - using public domain as a placeholder */}
-        <div className="mt-8 mx-auto rounded-xl border-2 border-orange-500/20 shadow-lg max-w-lg aspect-video overflow-hidden bg-zinc-950/80">
-          <video
-            className="w-full h-full object-cover"
-            src="https://www.w3schools.com/html/mov_bbb.mp4"
-            autoPlay={false}
-            controls
-            poster="/pixelpilotlogo.jpg"
-          />
-        </div>
+        {/* Center: Social & tagline */}
+                <div className="flex flex-col items-center mt-8">
+                  <div className="flex gap-7 mb-3 justify-center">
+                    {/* WhatsApp */}
+                    <a
+                      href="https://wa.me/+918977195143"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="WhatsApp"
+                      className="
+                        rounded-full p-[10px] hover:scale-110 shadow transition-all
+                        bg-[#25d366]
+                      "
+                      style={{
+                        boxShadow: "0 1px 12px 2px #25d36660"
+                      }}
+                    >
+                      <FaWhatsapp size={48} className="text-white" />
+                    </a>
+                    {/* Instagram */}
+                    <a
+                      href="https://www.instagram.com/pixelpilot_digitalsolutions/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Instagram"
+                      className="
+                        rounded-full p-[10px] hover:scale-110 shadow transition-all
+                        bg-gradient-to-br from-yellow-400 via-pink-600 to-purple-700
+                      "
+                      style={{
+                        boxShadow: "0 1px 12px 2px #ec489960"
+                      }}
+                    >
+                      <FaInstagram size={48} className="text-white" />
+                    </a>
+                    {/* Facebook */}
+                    <a
+                      href="https://www.facebook.com/share/1BH6zgWTzP/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Facebook"
+                      className="
+                        rounded-full p-[10px] hover:scale-110 shadow transition-all
+                        bg-[#1877f3]
+                      "
+                      style={{
+                        boxShadow: "0 1px 12px 2px #1877f360"
+                      }}
+                    >
+                      <FaFacebook size={48} className="text-white" />
+                    </a>
+                  </div>
+                  <div className="font-bold my-2 text-center">
+                    Connect With <span>
+                      <Link href="/" className="
+                        text-xl sm:text-xl md:text-xl font-extrabold uppercase tracking-widest select-none
+                        bg-gradient-to-tr from-orange-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent
+                        drop-shadow-[0_2px_18px_rgba(255,149,0,0.51)]
+                        transition-transform duration-200
+                        hover:scale-104
+                        cursor-pointer
+                        outline-none
+                      ">
+                        PIXELPILOT
+                      </Link></span> From our <span className="font-bold text-xl uppercase tracking-wider flex items-center gap-1 select-none">
+                      {/* "SO" WhatsApp */}
+                      <a
+                        href="https://wa.me/+918977195143"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="WhatsApp"
+                        className="inline-block transition-transform hover:scale-110 cursor-pointer"
+                        style={{ color: "#25D366" }} // WhatsApp green
+                      >
+                        SO
+                      </a>
+                      {/* "CI" Instagram gradient */}
+                      <a
+                        href="https://www.instagram.com/pixelpilot_digitalsolutions/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                        className="inline-block transition-transform hover:scale-110 cursor-pointer
+                          bg-gradient-to-br from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent"
+                        style={{
+                          WebkitBackgroundClip: "text",
+                          WebkitTextFillColor: "transparent"
+                        }}
+                      >
+                        CI
+                      </a>
+                      {/* "AL" Facebook blue */}
+                      <a
+                        href="https://www.facebook.com/share/1BH6zgWTzP/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook"
+                        className="inline-block transition-transform hover:scale-110 cursor-pointer"
+                        style={{ color: "#1877F3" }} // Facebook blue
+                      >
+                        AL
+                      </a>
+                    <span
+                      className="
+                        camelcase
+                        text-lg
+                        bg-gradient-to-r
+                        from-red-500
+                        via-yellow-400
+                        via-green-400
+                        via-blue-400
+                        to-pink-500
+                        bg-clip-text
+                        text-transparent
+                        inline-block
+                        align-middle
+                        drop-shadow
+                        bg-gradient-to-r from-red-500 via-yellow-400 via-green-400 via-blue-400 to-pink-500
+                      "
+                      style={{
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                        backgroundClip: "text" // fallback
+                      }}
+                    >
+                      &amp; Enjoy Our Services!
+                    </span>
+                    </span>
+                  </div>
+                </div>
       </div>
     </section>
   );

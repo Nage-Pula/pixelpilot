@@ -1,6 +1,6 @@
 import { FaDesktop, FaChartPie, FaInstagram, FaRocket } from "react-icons/fa";
 import Image from "next/image";
-
+import FadeIn from "../components/FadeIn";
 const projects = [
   {
     title: "E-Commerce Skyrocket 🚀",
@@ -30,12 +30,13 @@ export default function PortfolioPage() {
     <section className="container mx-auto px-4 py-16">
       <h1 className="uppercase text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-600 bg-clip-text text-transparent mb-10">PIXELPILOT PORTFOLIO</h1>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map(p => (
+        {projects.map((p, idx) => (
+          <FadeIn key={p.title} delay={idx * 0.1}>  
           <div
             key={p.title}
             className="rounded-2xl shadow-xl overflow-hidden bg-gradient-to-br from-black/70 via-orange-100/20 to-yellow-200/10 hover:scale-105 hover:shadow-2xl transition group">
             <div className="relative w-full aspect-[4/3]">
-              <Image src={p.img} alt={p.title} className="w-full h-full object-cover group-hover:brightness-110 transition" />
+              <Image src={p.img} alt={p.title} className="w-full h-full object-cover group-hover:brightness-110 transition" width={200} height={200}/>
               <div className="absolute top-3 left-3">{p.icon}</div>
             </div>
             <div className="p-6 flex flex-col gap-2 min-h-[150px]">
@@ -48,6 +49,7 @@ export default function PortfolioPage() {
               </a>
             </div>
           </div>
+          </FadeIn>
         ))}
       </div>
       <div className="text-center mt-10 p-5 font-semibold text-orange-400 rounded-xl bg-gradient-to-r from-orange-400/10 to-yellow-300/10 shadow">&quot;Let&apos;s build your next success story with PIXELPILOT!&quot;</div>
