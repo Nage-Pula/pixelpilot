@@ -58,7 +58,7 @@ export default function Home() {
             href="/contact"
             className="inline-block px-8 py-3 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-400 text-gray-900 font-bold text-lg tracking-wide shadow hover:scale-110 hover:bg-orange-400 transition-transform duration-200"
           >
-            Start With a Free Growth Audit
+            Come, Let&apos;s Connect Here..!
           </Link>
         </div>
       </section>

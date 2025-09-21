@@ -243,7 +243,7 @@ export default function ContactPage() {
                       <FaFacebook size={48} className="text-white" />
                     </a>
                   </div>
-                  <div className="font-bold my-2 text-center">
+                  <div className="uppercase text-orange-500 font-bold my-2 text-center">
                     Connect With <span>
                       <Link href="/" className="
                         text-xl sm:text-xl md:text-xl font-extrabold uppercase tracking-widest select-none
@@ -291,7 +291,7 @@ export default function ContactPage() {
                         className="inline-block transition-transform hover:scale-110 cursor-pointer"
                         style={{ color: "#1877F3" }} // Facebook blue
                       >
-                        AL
+                        ALs
                       </a>
                     <span
                       className="

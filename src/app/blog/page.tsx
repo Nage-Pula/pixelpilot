@@ -74,7 +74,9 @@ export default function BlogPage() {
         ))}
       </div>
       {/* Inspirational quote/CGI area */}
-      <div className="mt-10 p-5 bg-gradient-to-br from-orange-500/40 via-yellow-300/20 to-orange-600/60 rounded-xl shadow-xl flex items-center justify-center text-center text-lg font-bold text-orange-950">
+      {/* <div className="mt-10 p-5 bg-gradient-to-br from-orange-500/40 via-yellow-300/20 to-orange-600/60 rounded-xl shadow-xl flex items-center justify-center text-center text-lg font-bold text-orange-950"> */}
+
+      <div className="mt-10 p-5 bg-gradient-to-r from-orange-500 via-yellow-300 to-orange-600 rounded-xl shadow-xl flex items-center justify-center text-center text-lg font-bold text-orange-950">
         &quot;TRUST IS BUILT ON TRUTH. DIGITAL GROWTH IS BUILT ON PIXELPILOT.&quot;
       </div>      
     </section>
