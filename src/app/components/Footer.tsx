@@ -30,6 +30,7 @@ export default function Footer() {
             hover:scale-104
             cursor-pointer
             outline-none
+            animate-bounce
           ">
             PIXELPILOT
           </Link>
@@ -101,6 +102,7 @@ export default function Footer() {
                       hover:scale-110
                       cursor-pointer
                       outline-none
+                      animate-bounce
                     "
                   >
                     PIXELPILOT

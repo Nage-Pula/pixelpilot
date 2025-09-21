@@ -42,7 +42,14 @@ export default function Home() {
         <div className="absolute -top-32 -right-32 w-80 h-80 bg-orange-400/20 rounded-full blur-3xl pointer-events-none" />
         <div className="max-w-2xl mx-auto py-16 md:py-24 relative z-10">
           <h1 className="uppercase text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-orange-500 via-yellow-400 to-orange-600 bg-clip-text text-transparent mb-4 tracking-tighter">
-            Skyrocket Your Success with <span className="font-bold text-orange-600">PIXELPILOT</span>
+            Skyrocket Your Success with <span className="text-4xl sm:text-5xl md:text-6xl font-extrabold uppercase tracking-widest select-none
+            bg-gradient-to-tr from-orange-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent
+            drop-shadow-[0_2px_18px_rgba(255,149,0,0.51)]
+            transition-transform duration-200
+            hover:scale-104
+            cursor-pointer
+            outline-none
+            animate-bounce">PIXELPILOT</span>
           </h1>
           <h2 className="text-lg md:text-2xl text-orange-200 font-semibold mb-3">
             Your Trusted Digital Growth Co-Pilot 🚀
@@ -56,9 +63,15 @@ export default function Home() {
           </p>
           <Link
             href="/contact"
-            className="inline-block px-8 py-3 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-400 text-gray-900 font-bold text-lg tracking-wide shadow hover:scale-110 hover:bg-orange-400 transition-transform duration-200"
-          >
-            Come, Let&apos;s Connect Here..!
+            className="inline-block px-8 py-3 rounded-lg bg-gradient-to-r from-orange-400 to-yellow-400 text-black-400 font-bold text-lg tracking-wide shadow hover:scale-110 hover:bg-orange-400 transition-transform duration-200 animate-bounce" >
+            Come, Let&apos;s Connect here at <span className="font-extrabold uppercase tracking-widest select-none
+            bg-gradient-to-tr from-orange-700 to-orange-900 bg-clip-text text-transparent
+            drop-shadow-[0_2px_18px_rgba(255,149,0,0.51)]
+            transition-transform duration-200
+            hover:scale-104
+            cursor-pointer
+            outline-none
+            animate-bounce">PIXELPILOT</span>
           </Link>
         </div>
       </section>

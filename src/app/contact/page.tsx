@@ -243,16 +243,17 @@ export default function ContactPage() {
                       <FaFacebook size={48} className="text-white" />
                     </a>
                   </div>
-                  <div className="uppercase text-orange-500 font-bold my-2 text-center">
+                  <div className="uppercase text-yellow-500 font-bold my-2 text-center animate-bounce">
                     Connect With <span>
                       <Link href="/" className="
-                        text-xl sm:text-xl md:text-xl font-extrabold uppercase tracking-widest select-none
+                        text-2xl sm:text-2xl md:text-2xl font-extrabold uppercase tracking-widest select-none
                         bg-gradient-to-tr from-orange-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent
                         drop-shadow-[0_2px_18px_rgba(255,149,0,0.51)]
                         transition-transform duration-200
                         hover:scale-104
                         cursor-pointer
                         outline-none
+                        animate-bounce
                       ">
                         PIXELPILOT
                       </Link></span> From our <span className="font-bold text-xl uppercase tracking-wider flex items-center gap-1 select-none">
