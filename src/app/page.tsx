@@ -39,14 +39,14 @@ export default function Home() {
         style={{overflowX: 'hidden'}}
       >
         {/* Accent background circle for depth */}
-        <div className="absolute -top-32 -right-32 w-80 h-80 bg-orange-400/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -top-32 -right-32 w-70 h-70 bg-orange-400/20 rounded-full blur-3xl pointer-events-none" />
         <div className="max-w-2xl mx-auto py-16 md:py-24 relative z-10">
           <h1 className="uppercase text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-orange-500 via-yellow-400 to-orange-600 bg-clip-text text-transparent mb-4 tracking-tighter">
             Skyrocket Your Success with <span className="text-4xl sm:text-5xl md:text-6xl font-extrabold uppercase tracking-widest select-none
             bg-gradient-to-tr from-orange-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent
             drop-shadow-[0_2px_18px_rgba(255,149,0,0.51)]
             transition-transform duration-200
-            hover:scale-104
+            hover:scale-102
             cursor-pointer
             outline-none
             animate-bounce">PIXELPILOT</span>
