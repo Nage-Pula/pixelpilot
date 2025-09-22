@@ -22,6 +22,18 @@ html{
     --foreground: #fa4700;
   }
 }
+@media (max-width: 250px) {
+  .flex-xs-col {
+    flex-direction: column !important;
+    gap: 0.25rem !important;
+    align-items: stretch !important;
+  }
+  .flex-xs-col .icon-xs {
+    margin-bottom: 0.2rem;
+    margin-right: 0 !important;
+    align-self: flex-start;
+  }
+}
 
 body {
   background: var(--background);

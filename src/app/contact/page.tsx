@@ -134,27 +134,31 @@ export default function ContactPage() {
           onSubmit={handleSubmit}
         >
           {/* Avatar User Icon instead of name input */}
-          <div className="flex items-center gap-3">
-            <FaUserCircle className="text-4xl text-orange-400" />
+          <div className="flex items-center gap-2 sm:gap-3 flex-xs-col">
+            <span className="shrink-0 flex items-center justify-center w-7 h-7 sm:w-9 sm:h-9 icon-xs">
+              <FaUserCircle className="text-orange-400 text-2xl sm:text-3xl" />
+            </span>
             <input
               name="name"
               value={form.name}
               onChange={handleChange}
-              className="flex-1 p-3 rounded bg-zinc-800 text-white placeholder-gray-400 border border-zinc-700 focus:outline-orange-500"
+              className="flex-1 min-w-0 p-3 rounded bg-zinc-800 text-white placeholder-gray-400 border border-zinc-700 focus:outline-orange-500"
               placeholder="Your Name"
               type="text"
               required
             />
           </div>
           {/* WhatsApp number input with icon */}
-          <div className="flex items-center gap-3">
-            <FaWhatsapp className="text-3xl text-green-400" />
+          <div className="flex items-center gap-2 sm:gap-3 flex-xs-col">
+            <span className="shrink-0 flex items-center justify-center w-7 h-7 sm:w-9 sm:h-9 icon-xs">
+              <FaWhatsapp className="text-green-400 text-2xl sm:text-3xl" />
+            </span>
             <input
               name="number"
               value={form.number}
               onChange={handleChange}
-              className="flex-1 p-3 rounded bg-zinc-800 text-white placeholder-gray-400 border border-zinc-700 focus:outline-orange-500"
-              placeholder="Your WhatsApp Number (10 digits)"
+              className="flex-1 min-w-0 p-3 rounded bg-zinc-800 text-white placeholder-gray-400 border border-zinc-700 focus:outline-orange-500"
+              placeholder="Your WhatsApp Number"
               type="tel"
               pattern="[6-9][0-9]{9}"
               required
@@ -243,7 +247,7 @@ export default function ContactPage() {
                       <FaFacebook size={48} className="text-white" />
                     </a>
                   </div>
-                  <div className="uppercase text-yellow-500 font-bold my-2 text-center animate-bounce">
+                  <div className="uppercase text-yellow-500 font-bold my-2 text-center flex-xs-col icon-xs">
                     Connect With <span>
                       <Link href="/" className="
                         text-2xl sm:text-2xl md:text-2xl font-extrabold uppercase tracking-widest select-none
