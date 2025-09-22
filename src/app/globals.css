@@ -22,7 +22,7 @@ html{
     --foreground: #fa4700;
   }
 }
-@media (max-width: 250px) {
+@media (max-width: 350px) {
   .flex-xs-col {
     flex-direction: column !important;
     gap: 0.25rem !important;

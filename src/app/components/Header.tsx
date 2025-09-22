@@ -1,3 +1,4 @@
+
 "use client"
 import Image from "next/image";
 import Link from "next/link";
@@ -47,10 +48,10 @@ export default function ResponsiveHeader() {
           <Image
             src="/pixelpilotlogo.png"
             alt="PixelPilot logo"
-            width={600}
-            height={160}
+            width={900}
+            height={250}
             priority
-            className="w-28 sm:w-40 md:w-[300px] h-auto object-contain"
+            className="w-72 sm:w-72 md:w-[420px] h-auto object-contain"
             style={{
               background: '#000',
               borderRadius: '0.5rem',
@@ -101,10 +102,10 @@ export default function ResponsiveHeader() {
               <Image
                 src="/pixelpilotlogo.png"
                 alt="PixelPilot logo"
-                width={500}
+                width={700}
                 height={200}
                 priority
-                className="max-w-[120px] w-full h-auto object-contain"
+                className="max-w-[320px] w-full h-auto object-contain"
               />
             </Link>
             <button
