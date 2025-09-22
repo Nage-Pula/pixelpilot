@@ -1,4 +1,3 @@
-// Optionally, you can make icons more stylish by using react-icons or emoji.
 import { FaSearch, FaBullhorn, FaLaptopCode, FaChartLine, FaUserFriends, FaRegFileAlt } from "react-icons/fa";
 import FadeIn from "../components/FadeIn";
 import Link from "next/link";

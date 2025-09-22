@@ -1,6 +1,7 @@
 import { FaUsers, FaLightbulb, FaRocket, FaHandshake } from "react-icons/fa";
 import Image from "next/image";
 import FadeIn from "../components/FadeIn";
+import Link from "next/link";
 
 const values = [
   { icon: <FaRocket className="text-orange-400 text-2xl md:text-3xl" />, label: "INNOVATION", desc: "Always ahead, so our clients soar first." },
@@ -44,7 +45,11 @@ export default function AboutPage() {
       <div className="p-6 rounded-xl bg-gradient-to-r from-orange-400/10 via-yellow-200/10 to-orange-500/10 text-center shadow flex flex-col items-center gap-3">
         <span className="text-3xl">✨</span>
         <div className="uppercase font-bold text-orange-400">choose PIXELPILOT & ENJOY THE RIDE</div>
-        <p className="text-gray-200 text-sm">Ready to take off? <span className="text-orange-300">Contact us for a trusted partnership.</span></p>
+        <p className="text-gray-200 text-sm">Ready to take off? 
+        <Link href="/contact#contact-form" className=" 2 rounded-lg  text-orange font-bold shadow
+                hover:scale-110 hover:bg-orange-300 transition-all duration-200 text-sm">
+                <span className="text-orange-600">Contact us for a trusted partnership 🤝</span>
+              </Link></p>
       </div>
     </section>
   );

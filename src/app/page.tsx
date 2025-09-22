@@ -61,7 +61,7 @@ export default function Home() {
           <p className="text-gray-400 mb-8">
             <span className="font-semibold text-orange-300">Results-driven. Transparent. Innovative. Your growth, our mission.</span>
           </p>
-          <Link
+          {/* <Link
             href="/contact"
             className="inline-block px-8 py-3 rounded-lg bg-gradient-to-r from-orange-400 to-yellow-400 text-black-400 font-bold text-lg tracking-wide shadow hover:scale-110 hover:bg-orange-400 transition-transform duration-200 animate-bounce" >
             Come, Let&apos;s Connect here at <span className="font-extrabold uppercase tracking-widest select-none
@@ -72,6 +72,24 @@ export default function Home() {
             cursor-pointer
             outline-none
             animate-bounce">PIXELPILOT</span>
+          </Link> */}
+          <Link
+            href="/contact#contact-form"
+            className="inline-block px-8 py-3 rounded-lg bg-gradient-to-r from-orange-400 to-yellow-400 text-black font-extrabold text-lg tracking-wide shadow hover:scale-110 hover:bg-orange-400 transition-transform duration-200 animate-bounce"
+          >
+            🚀 Let&apos;s Team Up! <span className="inline-block animate-wiggle">🤝</span>
+            <br />
+            <span className="font-extrabold uppercase tracking-widest select-none
+              bg-gradient-to-tr from-orange-700 to-orange-900 bg-clip-text text-transparent
+              drop-shadow-[0_2px_18px_rgba(255,149,0,0.51)]
+              transition-transform duration-200
+              hover:scale-104
+              cursor-pointer
+              outline-none
+              animate-bounce"
+            >
+              CLICK HERE TO CONNECT WITH PIXELPILOT ✨
+            </span>
           </Link>
         </div>
       </section>
