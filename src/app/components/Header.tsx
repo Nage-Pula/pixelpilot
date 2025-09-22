@@ -48,10 +48,10 @@ export default function ResponsiveHeader() {
           <Image
             src="/pixelpilotlogo.png"
             alt="PixelPilot logo"
-            width={900}
+            width={800}
             height={250}
             priority
-            className="w-70 sm:w-70 md:w-[420px] h-auto object-contain"
+            className="w-60 sm:w-60 md:w-[400px] h-auto object-contain"
             style={{
               background: '#000',
               borderRadius: '0.5rem',
